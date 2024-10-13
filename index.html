@@ -11,12 +11,25 @@
   
 
   <!-- Custom Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+     tailwind.config = {
+        theme: {
+           extend: {
+              colors: {
+                 clifford: '#da373d',
+              }
+           }
+        }
+     }
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <p>Connecting GitHub</p>
-  <!-- Project -->
+  <p class="text-3xl text-red-800">Connecting GitHub</p>
+  
   <script src="main.js"></script>
 </body>
 </html>

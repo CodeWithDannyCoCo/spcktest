@@ -1,3 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
-    font-size: 15pt;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #00aaff, #001133);
+  color: #333;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  width: 90%; /* Makes it responsive */
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  color: #001133;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.instruction {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.game-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.number-display {
+  font-size: 4em;
+  background-color: #001133;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.guess {
+  width: 40%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 2px solid #001133;
+  border-radius: 5px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.check-btn {
+  width: 70%;
+  padding: 15px;
+  background-color: #001133;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.1em;
+}
+
+.check-btn:hover {
+  background-color: #004080;
+  transform: scale(1.05);
+}
+
+.message {
+  font-size: 1.4em;
+  margin-bottom: 25px;
+  color: #555;
+  min-height: 30px;
+}
+
+.score-box {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  color: #001133;
+  padding: 0 20px;
+}
+
+.play-again-btn {
+  padding: 10px 30px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.1em;
+}
+
+.play-again-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+body.correct .container {
+  background-color: #60b347;
+  color: white;
+}
+
+body.correct h1, body.correct .score-box {
+  color: white;
+}
+
+body.correct .check-btn, body.correct .play-again-btn {
+  background-color: #005b80; /* New color to contrast better */
+}
+
+body.correct .guess {
+  border-color: #4cae4c;
+}
+
+/* Animation for correct guess */
+.correct .number-display {
+  background-color: #60b347;
+  color: white;
+  transform: scale(1.2);
+  transition: transform 0.5s, background-color 0.5s;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em; /* Decrease header font size */
+  }
+
+  .instruction {
+    font-size: 1.1em; /* Decrease instruction font size */
+  }
+
+  .number-display {
+    width: 60px; /* Decrease number display size */
+    height: 60px;
+    font-size: 3em; /* Decrease number font size */
+  }
+
+  .guess {
+    width: 50%; /* Adjust input field width */
+    font-size: 1.2em; /* Decrease font size */
+    padding: 12px; /* Adjust padding */
+  }
+
+  .check-btn, .play-again-btn {
+    width: 60%; /* Adjust button width */
+    font-size: 1em; /* Decrease font size */
+    padding: 12px; /* Adjust padding */
+  }
+
+  .message {
+    font-size: 1.2em; /* Decrease message font size */
+  }
+
+  .score-box {
+    font-size: 1.1em; /* Decrease score font size */
+  }
 }

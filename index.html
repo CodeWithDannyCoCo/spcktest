@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Github Test</title>
-  
-  <!-- HTML -->
-  
+   <title>Github Test</title>
 
-  <!-- Custom Styles -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <script>
-     tailwind.config = {
-        theme: {
-           extend: {
-              colors: {
-                 clifford: '#da373d',
-              }
-           }
-        }
-     }
-  </script>
-  <link rel="stylesheet" href="style.css">
+   <!-- HTML -->
+
+
+   <!-- Custom Styles -->
+
+   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <p class="text-3xl text-red-800">Connecting GitHub</p>
-  
-  <script src="main.js"></script>
+   <div class="container">
+      <h1>Guess My Number!</h1>
+      <p class="instruction">Guess a number between 1 and 20</p>
+
+      <div class="game-box">
+         <div class="number-display">?</div> <!-- Question mark that changes -->
+         <input type="number" class="guess" placeholder="Enter your guess..." min="1" max="20">
+         <button class="check-btn">Check</button>
+      </div>
+
+      <p class="message">Start guessing...</p>
+
+      <div class="score-box">
+         <p>Score: <span class="score">20</span></p>
+         <p>Highscore: <span class="highscore">0</span></p>
+      </div>
+
+      <button class="play-again-btn">Play Again</button>
+   </div>
+
+   <script src="main.js"></script>
 </body>
+
 </html>

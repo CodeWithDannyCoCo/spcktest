@@ -165,7 +165,7 @@ body.correct .guess {
   .check-btn, .play-again-btn {
     width: 60%; /* Adjust button width */
     font-size: 1em; /* Decrease font size */
-    padding: 12px; /* Adjust padding */
+    padding: 20px; /* Adjust padding */
   }
 
   .message {
